@@ -1,7 +1,8 @@
 import React from 'react'
-import {AiOutlineTwitter, AiOutlineGithub} from "react-icons/ai"
+import {AiOutlineTwitter, AiOutlineGithub, AiOutlineLinkedin} from "react-icons/ai"
 import {GrInstagram} from "react-icons/gr"
 import {FiDribbble} from "react-icons/fi"
+import Link from 'next/link'
 
 
 
@@ -33,12 +34,11 @@ const Container = (props: Props) => {
                 </div> */}
                 <div className='flex items-center mt-6 md:mt-14'>
                     <ul className='flex items-center my-4 mr-6 space-x-2 sm:space-x-5 '>
-                        <li><a href="" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><AiOutlineTwitter size={24}/></a></li>
-                        <li><a href="" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><GrInstagram size={24}/></a></li>
-                        <li><a href="" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><FiDribbble size={24}/></a></li>
-                        <li><a href="" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><AiOutlineGithub size={24}/></a></li>
+                        <li><Link href="https://twitter.com/_AliDhamen" target="_blank" rel="noreferrer" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><AiOutlineTwitter size={24}/></Link></li>
+                        <li><Link href="https://linkedin.com/in/ali-aldhamen" target="_blank" rel="noreferrer" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><AiOutlineLinkedin size={24}/></Link></li>
+                        <li><Link href="https://github.com/Ali-AlDhamen" target="_blank" rel="noreferrer" className='transition duration-150 ease-in opacity-75 hover:opacity-100'><AiOutlineGithub size={24}/></Link></li>
                     </ul>
-                    <a href="mailto:satendermaurya1222@gmail.com" className='px-4 py-[5px] whitespace-nowrap transition ease-in duration-150 bg-neutral-700 hover:bg-neutral-600 rounded-2xl border-[0.5px] border-[#363636]'>Email me</a>
+                    <a href="mailto:ali77dhamen@hotmail.com" className='px-4 py-[5px] whitespace-nowrap transition ease-in duration-150 bg-neutral-700 hover:bg-neutral-600 rounded-2xl border-[0.5px] border-[#363636]'>Email me</a>
                 </div>
             </div>
         </div>
