@@ -38,10 +38,10 @@ const Container = (props: Props) => {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString(" A Web Developer")
+                    .typeString("Web Developer")
                     .pauseFor(1500)
                     .deleteAll()
-                    .typeString(" A App Developer")
+                    .typeString("App Developer")
                     .pauseFor(1500)
                     .start();
                 }}

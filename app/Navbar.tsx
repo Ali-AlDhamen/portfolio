@@ -20,7 +20,7 @@ const Navbar = (props: Props) => {
       </div>
       <nav
         className={`max-sm:absolute max-sm:w-full left-0 transition ease-in duration-300 ${
-          showNav ? "top-24 visible  z-10" : "max-sm:invisible top-0"
+          showNav ? "top-16 visible  z-10" : "max-sm:invisible top-0"
         }`}
       >
         <ul className="flex items-center justify-between max-sm:text-sm max-sm:justify-around">
