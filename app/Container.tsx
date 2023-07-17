@@ -20,12 +20,12 @@ const Container = (props: Props) => {
         <div className="flex items-end justify-end max-md:pt-4 ">
           <div className="relative">
             <img
-              className=" w-100% h-auto transform -scale-x-100 "
-              width={600}
-              src="man.png"
+              className=" w-100% h-auto transform scale-x-100 "
+              width={500}
+              src="facey.png"
               alt=""
             />
-            <div className="w-[60%] overflow-hidden h-[70%] z-[-1] top-[10%] left-[20%] rounded-full bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400  absolute"></div>
+            {/* <div className="w-[60%] overflow-hidden h-[70%] z-[-1] top-[10%] left-[20%] rounded-full bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400  absolute"></div> */}
           </div>
         </div>
         <div className="p-4 pl-0 mt-5 sm:mt-20">
