@@ -17,10 +17,10 @@ const Container = (props: Props) => {
   return (
     <div className="relative w-10/12 pt-4 mx-auto lg:pt-16">
       <div className="flex-row-reverse items-center justify-between md:flex">
-        <div className="flex items-end justify-end max-md:pt-4">
+        <div className="flex items-end justify-end max-md:pt-4 ">
           <div className="relative">
             <img
-              className=" w-100% h-auto transform -scale-x-100"
+              className=" w-100% h-auto transform -scale-x-100 "
               width={600}
               src="man.png"
               alt=""
