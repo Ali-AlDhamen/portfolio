@@ -41,7 +41,8 @@ const Projects = (props: Props) => {
             <div className='mx-auto my-10 sm:w-10/12'>
                 <h1 className='mb-4 text-2xl font-bold'>QuizAI App</h1>
                 <div className='text-neutral-300'>Mobile application for personalized quizzes. you can effortlessly generate quizzes from text or files, or dive into exciting quizzes created by others. Built With Flutter and Firebase (Still Cooking)</div>
-                <div className='inline-block mt-6'><Link href=""  className='flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700'>Explore <BsArrowUpRight size={14} className='ml-2'/></Link></div>
+                <div className='inline-block mt-6'><Link href="" target="_blank"
+          rel="noreferrer"  className='flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700'>Explore <BsArrowUpRight size={14} className='ml-2'/></Link></div>
             </div>
         </div>
     </div>
