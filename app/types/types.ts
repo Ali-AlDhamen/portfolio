@@ -14,3 +14,11 @@ export interface ServiceItemProps {
   Icon: IconType;
   color: string;
 }
+
+export interface ToolItemProps {
+  title: string;
+  description: string;
+  image: string | StaticImageData;
+  link: string;
+
+}
