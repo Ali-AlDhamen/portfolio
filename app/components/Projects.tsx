@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import Link from "next/link";
 import projectItems from "../data/projectItems";
 import ProjectItem from "./ProjectItem";
 

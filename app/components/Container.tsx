@@ -22,7 +22,6 @@ const Container = () => {
               src={emoji}
               alt=""
             />
-            {/* <div className="w-[60%] overflow-hidden h-[70%] z-[-1] top-[10%] left-[20%] rounded-full bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400  absolute"></div> */}
           </div>
         </div>
         <div className="p-4 pl-0 mt-5 sm:mt-20">
@@ -48,16 +47,6 @@ const Container = () => {
           <p className="text-base sm:text-xl md:text-base lg:text-xl xl:text-2xl lg:pt-6">
             bringing imagination to live
           </p>
-          {/* <div className='pt-10'>
-                    <p className='inline-block px-3 py-1 shadow-md before:bg-white bg-slate-400'>Hire</p>
-                    <button className="pushable">
-                        <span className="shadow"></span>
-                        <span className="edge"></span>
-                        <span className="front">
-                            Hire Now!
-                        </span>
-                    </button>
-                </div> */}
           <div className="flex items-center mt-6 md:mt-14">
             <ul className="flex items-center my-4 mr-6 space-x-2 sm:space-x-5 ">
               <li>

@@ -1,12 +1,3 @@
-import React from "react";
-import {
-  MdDesignServices,
-  MdDeveloperMode,
-  MdOutlineWeb,
-} from "react-icons/md";
-import { AiOutlineFieldTime } from "react-icons/ai";
-import { GiCardDraw } from "react-icons/gi";
-
 import serviceItems from "../data/serviceItems";
 import ServiceItem from "./ServiceItem";
 
