@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Navbar from './Navbar'
-import Container from './Container'
-import Services from './Services'
-import Projects from './Projects'
-import Tools from './Tools'
+import Navbar from './components/Navbar'
+import Container from './components/Container'
+import Services from './components/Services'
+import Projects from './components/Projects'
+import Tools from './components/Tools'
 
 export default function Home() {
   return (

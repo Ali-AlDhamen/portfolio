@@ -4,9 +4,7 @@ import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [showNav, setShowNav] = useState<boolean>(false);
   return (
     <div className="flex items-center justify-between  flex-nowrap w-full pb-3 border-b-[1px] border-neutral-500">
