@@ -16,7 +16,7 @@ const ServiceItem: FC<ServiceItemProps> = ({title, description , Icon, color}) =
         <p className="mt-10 text-center mb-7">
           <a
             href="#projects"
-            className={`px-4 py-2 rounded-sm border-[0.5px] border-[#363636] shadow-md text-gray-400 hover:text-${color}`}
+            className={`px-4 py-2 rounded-sm border-[0.5px] border-[#363636] shadow-md text-gray-400 ` + `hover:text-${color}`}
           >
             know more
           </a>

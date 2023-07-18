@@ -12,6 +12,10 @@ module.exports = {
     "text-pink-600",
     'bg-yellow-600',
     "text-yellow-600",
+    "hover:text-blue-600",
+    "hover:text-pink-600",
+    "hover:text-yellow-600",
+
   ],
   theme: {
     extend: {
