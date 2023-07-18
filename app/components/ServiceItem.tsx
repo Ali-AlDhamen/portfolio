@@ -3,6 +3,7 @@ import { ServiceItemProps } from "../types/types";
 
 
 const ServiceItem: FC<ServiceItemProps> = ({title, description , Icon, color}) => {
+
     return (  
         <div className="p-5 mt-5 overflow-hidden md:w-1/3 d relativ">
         <h1 className="mt-5 text-center">{title}</h1>
