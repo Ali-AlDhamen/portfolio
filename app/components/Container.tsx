@@ -1,28 +1,25 @@
 "use client";
 import Typewriter from "typewriter-effect";
-
 import React from "react";
 import {
   AiOutlineTwitter,
   AiOutlineGithub,
   AiOutlineLinkedin,
 } from "react-icons/ai";
-import { GrInstagram } from "react-icons/gr";
-import { FiDribbble } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
+import { emoji } from "@/public/assets/images";
 
-type Props = {};
 
-const Container = (props: Props) => {
+const Container = () => {
   return (
     <div className="relative w-10/12 pt-4 mx-auto lg:pt-16">
       <div className="flex-row-reverse items-center justify-between md:flex">
         <div className="flex items-end justify-end max-md:pt-4 ">
           <div className="relative">
-            <img
+            <Image
               className=" w-100% h-auto transform scale-x-100 "
-              width={500}
-              src="facey.png"
+              src={emoji}
               alt=""
             />
             {/* <div className="w-[60%] overflow-hidden h-[70%] z-[-1] top-[10%] left-[20%] rounded-full bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400  absolute"></div> */}
