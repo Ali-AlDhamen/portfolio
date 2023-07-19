@@ -3,7 +3,7 @@ import { ServiceItemProps } from "../types/types";
 
 
 const ServiceItem: FC<ServiceItemProps> = ({title, description , Icon, color}) => {
-
+    const bgColor = `bg-${color}`;
     return (  
         <div className="p-5 mt-5 overflow-hidden md:w-1/3 d relativ">
         <h1 className="mt-5 text-center">{title}</h1>
@@ -22,7 +22,7 @@ const ServiceItem: FC<ServiceItemProps> = ({title, description , Icon, color}) =
           </a>
         </p>
         <span className="w-[60px] h-[60px] z-[-2] blur-[100px] left-[45%] bg-white absolute top-0 "></span>
-        <span className={`w-[20px] h-[20px] z-[-2] blur-[20px] left-[48%]  absolute top-[27%] bg-${color}`}></span>
+        <span className={`w-[20px] h-[20px] z-[-2] blur-[20px] left-[48%]  absolute top-[27%] ${bgColor}`}></span>
         <span className="w-[50px] h-[50px] z-[-2] blur-[70px] right-0 bg-blue-600 absolute bottom-0 "></span>
         <span className="w-[25px] h-[25px] z-[-2] blur-[40px] top-[75%] left-[40%] bg-green-600 absolute bottom-0 "></span>
       </div>
