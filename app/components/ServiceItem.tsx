@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { ServiceItemProps } from "../types/types";
+import "../globals.css";
 
 const findColor = (color: string) => {
   switch (color) {
@@ -42,7 +43,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
       </p>
       <span className="w-[60px] h-[60px] z-[-2] blur-[100px] left-[45%] bg-white absolute top-0 "></span>
       <span
-        className={`w-[20px] h-[20px] z-[-2] blur-[20px] left-[48%]  absolute top-[27%] ${bgColor}`}
+        className={`w-[20px] h-[20px] z-[-2] blur-[20px] left-[48%]  absolute top-[27%] ${bgColor} bg-blue-600`}
       ></span>
       <span className="w-[50px] h-[50px] z-[-2] blur-[70px] right-0 bg-blue-600 absolute bottom-0 "></span>
       <span className="w-[25px] h-[25px] z-[-2] blur-[40px] top-[75%] left-[40%] bg-green-600 absolute bottom-0 "></span>
