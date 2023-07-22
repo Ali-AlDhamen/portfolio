@@ -15,6 +15,7 @@ export default function Home() {
   useEffect(() => {
     bayanplus.init({
       projectId: env.BAYAN_PROJECT_ID ?? "",
+      isDev: false,
     });
   }, []);
   return (
