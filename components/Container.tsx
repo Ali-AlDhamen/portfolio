@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { analytics } from "../utils/analytics";
 
 import {
   AiOutlineGithub,
@@ -12,15 +11,17 @@ import { emoji } from "../public/assets/images";
 import TypeWriter from "./TypeWriter";
 
 const Container = () => {
-  function trackEvent(social: string) {
-    try {
-      analytics.track("socialMedia", {
-        social,
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  }
+  const trackEvent = (social: string) => {
+    fetch("/api/track", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ social }),
+    });
+    
+  };
+
   return (
     <div className="relative w-10/12 pt-4 mx-auto lg:pt-16">
       <div className="flex-row-reverse items-center justify-between md:flex">
