@@ -1,6 +1,6 @@
 'use client'
 
-import { analytics } from '@/utils/analytics'
+import { analytics } from '../utils/analytics'
 import { BarChart, Card } from '@tremor/react'
 import { ArrowDownRight, ArrowRight, ArrowUpRight } from 'lucide-react'
 import ReactCountryFlag from 'react-country-flag'
@@ -17,7 +17,7 @@ const Badge = ({ percentage }: { percentage: number }) => {
   const isNeutral = percentage === 0
   const isNegative = percentage < 0
 
-  if (isNaN(percentage)) return null
+  if (Number.isNaN(percentage)) return null
 
   const positiveClassname = 'bg-green-900/25 text-green-400 ring-green-400/25'
   const neutralClassname = 'bg-zinc-900/25 text-zinc-400 ring-zinc-400/25'
@@ -32,9 +32,9 @@ const Badge = ({ percentage }: { percentage: number }) => {
           ? neutralClassname
           : negativeClassname
       }`}>
-      {isPositive ? <ArrowUpRight className='h-3 w-3' /> : null}
-      {isNeutral ? <ArrowRight className='h-3 w-3' /> : null}
-      {isNegative ? <ArrowDownRight className='h-3 w-3' /> : null}
+      {isPositive ? <ArrowUpRight className='w-3 h-3' /> : null}
+      {isNeutral ? <ArrowRight className='w-3 h-3' /> : null}
+      {isNegative ? <ArrowDownRight className='w-3 h-3' /> : null}
       {percentage.toFixed(0)}%
     </span>
   )
@@ -48,12 +48,12 @@ const AnalyticsDashboard = ({
 }: AnalyticsDashboardProps) => {
   return (
     <div className='flex flex-col gap-6'>
-      <div className='grid w-full mx-auto grid-cols-1 sm:grid-cols-2 gap-6'>
+      <div className='grid w-full grid-cols-1 gap-6 mx-auto sm:grid-cols-2'>
         <Card className='w-full'>
           <p className='text-tremor-default text-dark-tremor-content'>
             Avg. visitors/day
           </p>
-          <p className='text-3xl text-dark-tremor-content-strong font-semibold'>
+          <p className='text-3xl font-semibold text-dark-tremor-content-strong'>
             {avgVisitorsPerDay}
           </p>
         </Card>
@@ -66,17 +66,17 @@ const AnalyticsDashboard = ({
               }
             />
           </p>
-          <p className='text-3xl text-dark-tremor-content-strong font-semibold'>
+          <p className='text-3xl font-semibold text-dark-tremor-content-strong'>
             {amtVisitorsToday}
           </p>
         </Card>
       </div>
 
-      <Card className='flex flex-col sm:grid grid-cols-4 gap-6'>
-        <h2 className='w-full text-dark-tremor-content-strong text-center sm:left-left font-semibold text-xl'>
+      <Card className='flex flex-col grid-cols-4 gap-6 sm:grid'>
+        <h2 className='w-full text-xl font-semibold text-center text-dark-tremor-content-strong sm:left-left'>
           This weeks top visitors:
         </h2>
-        <div className='col-span-3 flex items-center justify-between flex-wrap gap-8'>
+        <div className='flex flex-wrap items-center justify-between col-span-3 gap-8'>
           {topCountries?.map(([countryCode, number]) => {
             return (
               <div key={countryCode} className='flex items-center gap-3 text-dark-tremor-content-strong'>
@@ -106,7 +106,7 @@ const AnalyticsDashboard = ({
             data={timeseriesPageviews.map((day) => ({
               name: day.date,
               Visitors: day.events.reduce((acc, curr) => {
-                return acc + Object.values(curr)[0]!
+                return acc + Object.values(curr)[0]
               }, 0),
             }))}
             categories={['Visitors']}
