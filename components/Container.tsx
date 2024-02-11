@@ -1,19 +1,15 @@
 "use client";
-import Typewriter from "typewriter-effect";
+import Image from "next/image";
+import Link from "next/link";
 import {
-  AiOutlineTwitter,
   AiOutlineGithub,
   AiOutlineLinkedin,
+  AiOutlineTwitter,
 } from "react-icons/ai";
-import Link from "next/link";
-import Image from "next/image";
-import { emoji } from "@/public/assets/images";
-import bayanplus from "bayanplus-js";
+import Typewriter from "typewriter-effect";
+import { emoji } from "../public/assets/images";
 
 const Container = () => {
-  const socialMediaEvent = (name: string) => {
-    bayanplus.event(`Social Media Visited ${name}`);
-  };
   return (
     <div className="relative w-10/12 pt-4 mx-auto lg:pt-16">
       <div className="flex-row-reverse items-center justify-between md:flex">
@@ -34,6 +30,11 @@ const Container = () => {
             I&apos;m Ali
             <div className="py-4 text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl">
               <Typewriter
+                options={{
+                  loop: true,
+                  delay: 50,
+                  deleteSpeed: 20,
+                }}
                 onInit={(typewriter) => {
                   typewriter
                     .typeString("Web Developer")
@@ -57,7 +58,6 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
-                  onClick={() => socialMediaEvent("Twitter")}
                 >
                   <AiOutlineTwitter size={24} />
                 </Link>
@@ -68,7 +68,6 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
-                  onClick={() => socialMediaEvent("LinkedIn")}
                 >
                   <AiOutlineLinkedin size={24} />
                 </Link>
@@ -79,7 +78,6 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
-                  onClick={() => socialMediaEvent("GitHub")}
                 >
                   <AiOutlineGithub size={24} />
                 </Link>
@@ -88,7 +86,6 @@ const Container = () => {
             <Link
               href="mailto:ali77dhamen@hotmail.com"
               className="px-4 py-[5px] whitespace-nowrap transition ease-in duration-150 bg-neutral-700 hover:bg-neutral-600 rounded-2xl border-[0.5px] border-[#363636]"
-              onClick={() => socialMediaEvent("Email")}
             >
               Email me
             </Link>

@@ -1,6 +1,5 @@
-import { aklne, taqyeemi , gforce , quizAi} from "@/public/assets/images";
+import { aklne, gforce, quizAi, taqyeemi } from "../public/assets/images";
 import { ProjectItemProps } from "../types/types";
-
 
 const projectItems: ProjectItemProps[] = [
   {
