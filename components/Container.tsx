@@ -1,15 +1,26 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { analytics } from "../utils/analytics";
+
 import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import Typewriter from "typewriter-effect";
 import { emoji } from "../public/assets/images";
+import TypeWriter from "./TypeWriter";
 
 const Container = () => {
+  function trackEvent(social: string) {
+    try {
+      analytics.track("socialMedia", {
+        social,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
   return (
     <div className="relative w-10/12 pt-4 mx-auto lg:pt-16">
       <div className="flex-row-reverse items-center justify-between md:flex">
@@ -28,24 +39,7 @@ const Container = () => {
           </p>
           <h1 className="pt-2 text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl lg:pt-6">
             I&apos;m Ali
-            <div className="py-4 text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl">
-              <Typewriter
-                options={{
-                  loop: true,
-                  delay: 50,
-                  deleteSpeed: 20,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Web Developer")
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString("App Developer")
-                    .pauseFor(1500)
-                    .start();
-                }}
-              />{" "}
-            </div>
+            <TypeWriter />
           </h1>
           <p className="text-base sm:text-xl md:text-base lg:text-xl xl:text-2xl lg:pt-6">
             bringing imagination to live
@@ -58,6 +52,7 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
+                  onClick={() => trackEvent("twitter")}
                 >
                   <AiOutlineTwitter size={24} />
                 </Link>
@@ -68,6 +63,7 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
+                  onClick={() => trackEvent("linkedin")}
                 >
                   <AiOutlineLinkedin size={24} />
                 </Link>
@@ -78,6 +74,7 @@ const Container = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="transition duration-150 ease-in opacity-75 hover:opacity-100"
+                  onClick={() => trackEvent("github")}
                 >
                   <AiOutlineGithub size={24} />
                 </Link>
@@ -86,6 +83,7 @@ const Container = () => {
             <Link
               href="mailto:ali77dhamen@hotmail.com"
               className="px-4 py-[5px] whitespace-nowrap transition ease-in duration-150 bg-neutral-700 hover:bg-neutral-600 rounded-2xl border-[0.5px] border-[#363636]"
+              onClick={() => trackEvent("email")}
             >
               Email me
             </Link>
