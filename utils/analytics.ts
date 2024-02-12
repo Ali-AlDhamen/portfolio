@@ -21,7 +21,7 @@ export class Analytics {
     let key = `analytics::${namespace}`
 
     if (!opts?.persist) {
-      key += `::${getDate(1)}`
+      key += `::${getDate()}`
     }
 
     // db call to persist this event
